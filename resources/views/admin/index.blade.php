@@ -1,6 +1,6 @@
 @extends('layouts.admin.main')
 
-@section('title', 'Admin')
+@section('title', 'Admin | Home')
 
 @section('css')
 @parent

@@ -1,108 +1,107 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BeMo | Academic Consulting</title>
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{ asset('admin_lte/plugins/fontawesome-free/css/all.min.css')}}">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- icheck bootstrap -->
-        <link rel="stylesheet" href="{{ asset('admin_lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="{{ asset('admin_lte/dist/css/adminlte.min.css')}}">
-        <!-- Google Font: Source Sans Pro -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Bemo | Login</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="icon" href="{{ asset('files/favicon-16x16.png') }}" type="image/gif" sizes="16x16">
+	<meta name="author" content="Bemo">
 
-        <style>
-        .login-page {
-            background-image: url({{ asset('files/background2.jpg') }});
-            background-color: #cccccc;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-        </style>
-    </head>
-    <body class="hold-transition login-page">
-        <div class="login-box">
-            <div class="login-logo">
-                <a href="#">
-                    <img src="{{ asset(displayGeneralSettings()->logo_image) }}" width="167" height="100" alt="Site logo" />
-                </a>
-            </div>
-            <!-- /.login-logo -->
-            <div class="card">
-                <div class="card-body login-card-body">
-                    <p class="login-box-msg">Sign in to start your session</p>
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-                        <div class="input-group mb-3">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                            @error('email')
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="{{asset('color-admin/assets/css/facebook/app.min.css')}}" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+</head>
+<body class="pace-top">
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade show">
+		<span class="spinner"></span>
+	</div>
+	<!-- end #page-loader -->
+
+	<!-- begin login-cover -->
+	<div class="login-cover">
+		<div class="login-cover-image" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-17.jpg')}})" data-id="login-cover-image"></div>
+		<div class="login-cover-bg"></div>
+	</div>
+	<!-- end login-cover -->
+
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+		<!-- begin login -->
+		<div class="login login-v2" data-pageload-addclass="animated fadeIn">
+			<!-- begin brand -->
+			<div class="login-header">
+				<div class="brand">
+					<span class="logo"></span> <b>Bemo</b> Admin
+				</div>
+				<div class="icon">
+					<i class="fa fa-lock"></i>
+				</div>
+			</div>
+			<!-- end brand -->
+			<!-- begin login-content -->
+			<div class="login-content">
+                <form action="{{ route('login') }}" method="POST" class="margin-bottom-0">
+                    @csrf
+					<div class="form-group m-b-20">
+                        <input id="email" type="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror" placeholder="Email Address" value="{{ old('email') }}" autocomplete="email" autofocus required />
+                        @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                        @enderror
+					</div>
+					<div class="form-group m-b-20">
+                        <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" />
 
-                            @error('password')
+                        @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="icheck-primary">
-                                    <label for="remember">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        @enderror
+					</div>
+					{{-- <div class="checkbox checkbox-css m-b-20">
+						<input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
+						<label for="remember">
+							{{ __('Remember Me') }}
+						</label>
+					</div> --}}
+					<div class="login-buttons">
+						<button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
+					</div>
+					<div class="m-t-20">
+						{{ __('Forgot Your Password?') }} <a href="{{ route('password.request') }}">Click here</a> to recover.
+					</div>
+				</form>
+			</div>
+			<!-- end login-content -->
+		</div>
+		<!-- end login -->
 
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-4">
-                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                            </div>
-                            <!-- /.col -->
-                        </div>
-                    </form>
-                    <p class="mb-1">
-                        @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                        @endif
-                    </p>
+		<!-- begin login-bg -->
+		<ul class="login-bg-list clearfix">
+			<li class="active"><a href="javascript:;" data-click="change-bg" data-img="{{asset('color-admin/assets/img/login-bg/login-bg-17.jpg')}}" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-17.jpg')}})"></a></li>
+			<li><a href="javascript:;" data-click="change-bg" data-img="{{asset('color-admin/assets/img/login-bg/login-bg-16.jpg')}}" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-16.jpg')}})"></a></li>
+			<li><a href="javascript:;" data-click="change-bg" data-img="{{asset('color-admin/assets/img/login-bg/login-bg-15.jpg')}}" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-15.jpg')}})"></a></li>
+			<li><a href="javascript:;" data-click="change-bg" data-img="{{asset('color-admin/assets/img/login-bg/login-bg-14.jpg')}}" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-14.jpg')}})"></a></li>
+			<li><a href="javascript:;" data-click="change-bg" data-img="{{asset('color-admin/assets/img/login-bg/login-bg-13.jpg')}}" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-13.jpg')}})"></a></li>
+			<li><a href="javascript:;" data-click="change-bg" data-img="{{asset('color-admin/assets/img/login-bg/login-bg-12.jpg')}}" style="background-image: url({{asset('color-admin/assets/img/login-bg/login-bg-12.jpg')}})"></a></li>
+		</ul>
+		<!-- end login-bg -->
 
-                </div>
-                <!-- /.login-card-body -->
-            </div>
-        </div>
-        <!-- /.login-box -->
-        <!-- jQuery -->
-        <script src="{{ asset('admin_lte/plugins/jquery/jquery.min.js')}}"></script>
-        <!-- Bootstrap 4 -->
-        <script src="{{ asset('admin_lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <!-- AdminLTE App -->
-        <script src="{{ asset('admin_lte/dist/js/adminlte.min.js')}}"></script>
-    </body>
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="{{asset('color-admin/assets/js/app.min.js')}}"></script>
+	<script src="{{asset('color-admin/assets/js/theme/facebook.min.js')}}"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="{{asset('color-admin/assets/js/demo/login-v2.demo.js')}}"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+</body>
 </html>

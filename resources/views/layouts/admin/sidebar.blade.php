@@ -11,8 +11,8 @@
                         <img src="{{asset('color-admin/assets/img/user/user-13.jpg')}}" alt="" />
                     </div>
                     <div class="info">
-                        <b class="caret pull-right"></b>{{ Auth::user()->name }}
-                        <small>{{ Auth::user()->email }}</small>
+                        <b class="caret pull-right"></b>@if(isset(Auth::user()->name)) {{ Auth::user()->name }} @endif
+                        <small>@if(isset(Auth::user()->email)) {{ Auth::user()->email }} @endif</small>
                     </div>
                 </a>
             </li>

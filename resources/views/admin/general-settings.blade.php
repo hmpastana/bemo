@@ -1,6 +1,6 @@
 @extends('layouts.admin.main')
 
-@section('title', 'Admin | Contact Us')
+@section('title', 'Admin | General Settings')
 
 @section('css')
 @parent
