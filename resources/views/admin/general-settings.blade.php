@@ -73,13 +73,16 @@
                                     <div class="icheck-success d-inline">
                                         <input  class="form-control" type="radio" @if(isset($list->facebook_icon) and $list->facebook_icon == 'fa fa-facebook') checked @endif name="facebook_icon" value="fa fa-facebook" id="faceRadioSuccess1">
                                         <label for="faceRadioSuccess1">
-                                            <i class="fa fa-facebook-f"></i>
+                                            <span class="fa-stack">
+                                                <i class="fab fa-lg fa-fw m-r-10 fa-facebook"></i>
+                                            </span>
                                         </label>
+
                                     </div>
                                     <div class="icheck-success d-inline">
                                         <input  class="form-control" type="radio"  @if(isset($list->facebook_icon) and $list->facebook_icon == 'fa fa-facebook-square') checked @endif name="facebook_icon" value="fa fa-facebook-square" id="faceRadioSuccess2">
                                         <label for="faceRadioSuccess2">
-                                            <i class="fa fa-facebook-square"></i>
+                                            <i class="fab fa-lg fa-fw m-r-10 fa-facebook-square"></i>
                                         </label>
                                     </div>
                                 </div>
@@ -95,13 +98,13 @@
                                     <div class="icheck-success d-inline">
                                         <input  class="form-control" type="radio" @if(isset($list->twitter_icon) and $list->twitter_icon == 'fa fa-twitter') checked @endif name="twitter_icon" value="fa fa-twitter" id="twitterRadioSuccess1">
                                         <label for="twitterRadioSuccess1">
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fab fa-lg fa-fw m-r-10 fa-twitter"></i>
                                         </label>
                                     </div>
                                     <div class="icheck-success d-inline">
-                                        <input  class="form-control" type="radio" @if(isset($list->twitter_icon) and $list->twitter_icon == 'fa fa-twitter-square') checked @endif name="twitter_icon" value="fab fa-lg fa-fw m-r-10 fa-twitter-square" id="twitterRadioSuccess2">
+                                        <input  class="form-control" type="radio" @if(isset($list->twitter_icon) and $list->twitter_icon == 'fa fa-twitter-square') checked @endif name="twitter_icon" value="fa fa-twitter-square" id="twitterRadioSuccess2">
                                         <label for="twitterRadioSuccess2">
-                                            <i class="fa fa-twitter-square"></i>
+                                            <i class="fab fa-lg fa-fw m-r-10 fa-twitter-square"></i>
                                         </label>
                                     </div>
                                 </div>
@@ -154,10 +157,11 @@
                                 </div>
                             </div>
 
-
                             <div class="form-group">
-                                <div class="float-right">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                <div class="col-md-12">
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

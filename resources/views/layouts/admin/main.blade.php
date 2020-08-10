@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     @section('css')
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{ asset('admin_lte/plugins/font-awesome/css/font-awesome.css')}}">
+        {{-- <link rel="stylesheet" href="{{ asset('admin_lte/plugins/font-awesome/css/font-awesome.css')}}"> --}}
         <!-- ================== BEGIN BASE CSS STYLE ================== -->
         <link href="{{asset('color-admin/assets/css/transparent/app.min.css')}}" rel="stylesheet" />
         <!-- ================== END BASE CSS STYLE ================== -->

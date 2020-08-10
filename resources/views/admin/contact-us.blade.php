@@ -117,8 +117,10 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="float-right">
-                                    <button type="submit" class="btn btn-primary">Save</button>
+                                <div class="col-md-12">
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
