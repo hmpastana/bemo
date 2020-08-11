@@ -4,9 +4,6 @@
 
 @section('css')
 @parent
-<!-- summernote -->
-<link rel="stylesheet" href="{{ asset('admin_lte/plugins/summernote/summernote-bs4.css')}}">
-
 <!-- iCheck for checkboxes and radio inputs -->
 <link rel="stylesheet" href="{{ asset('admin_lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
 
@@ -181,19 +178,11 @@
 <!-- ChartJS -->
 <script src="{{ asset('admin_lte/plugins/chart.js/Chart.min.js')}}"></script>
 
-<!-- Summernote -->
-<script src="{{ asset('admin_lte/plugins/summernote/summernote-bs4.min.js')}}"></script>
-
 <!-- bs-custom-file-input -->
 <script src="{{ asset('admin_lte/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
 
 <script>
 $(function () {
-  // Summernote
-    $('.textarea').summernote({
-        height: 100,
-    });
-
     bsCustomFileInput.init();
 })
 

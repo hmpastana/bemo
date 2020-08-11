@@ -7,10 +7,8 @@
 	<meta content="" name="description" />
     <meta content="" name="author" />
     <link rel="icon" href="{{ asset('files/favicon-16x16.png') }}" type="image/gif" sizes="16x16">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> --}}
     @section('css')
-        <!-- Font Awesome -->
-        {{-- <link rel="stylesheet" href="{{ asset('admin_lte/plugins/font-awesome/css/font-awesome.css')}}"> --}}
         <!-- ================== BEGIN BASE CSS STYLE ================== -->
         <link href="{{asset('color-admin/assets/css/transparent/app.min.css')}}" rel="stylesheet" />
         <!-- ================== END BASE CSS STYLE ================== -->
