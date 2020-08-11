@@ -137,9 +137,6 @@
 
 @section('js')
 @parent
-<!-- ChartJS -->
-<script src="{{ asset('admin_lte/plugins/chart.js/Chart.min.js')}}"></script>
-
 <!-- Summernote -->
 <script src="{{ asset('admin_lte/plugins/summernote/summernote-bs4.min.js')}}"></script>
 

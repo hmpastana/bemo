@@ -175,9 +175,6 @@
 
 @section('js')
 @parent
-<!-- ChartJS -->
-<script src="{{ asset('admin_lte/plugins/chart.js/Chart.min.js')}}"></script>
-
 <!-- bs-custom-file-input -->
 <script src="{{ asset('admin_lte/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
 

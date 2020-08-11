@@ -12,6 +12,7 @@
         <!-- ================== BEGIN BASE CSS STYLE ================== -->
         <link href="{{asset('color-admin/assets/css/transparent/app.min.css')}}" rel="stylesheet" />
         <!-- ================== END BASE CSS STYLE ================== -->
+
     @show
 </head>
 <body>
