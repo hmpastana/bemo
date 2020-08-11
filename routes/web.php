@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-// Route::group(['prefix' => '/', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => '/', 'middleware' => 'auth'], function() {
 
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('contact-us', 'ContactUsController@index')->name('contact-us');
@@ -35,4 +35,4 @@ Auth::routes();
             Route::post('/store', 'GeneralSettingsController@store')->name('admin-general-settings-store');
         });
     });
-// });
+});
